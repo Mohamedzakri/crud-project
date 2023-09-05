@@ -11,7 +11,6 @@ import java.util.Date;
 @Entity
 @Table(name = "task_table")
 @NoArgsConstructor
-@AllArgsConstructor
 @Data
 public class TaskEntity {
     @Id
