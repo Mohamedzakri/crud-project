@@ -1,4 +1,6 @@
 package it.mohamed.crudproject.repo;
 
-public interface TaskRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TaskRepository<T, ID> extends JpaRepository<T, ID> {
 }

@@ -1,4 +1,6 @@
 package it.mohamed.crudproject.repo;
 
-public interface UserRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository<T, ID> extends JpaRepository<T, ID> {
 }

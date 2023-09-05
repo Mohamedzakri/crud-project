@@ -16,7 +16,7 @@ import java.util.Date;
 public class TaskEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_task")
+    @Column(name = "id_task", unique = true)
     private long id;
 
     @Column(name = "task_objective")
@@ -30,8 +30,9 @@ public class TaskEntity {
     @Column(name = "task_status")
     private TaskStatus status;
 
-    @Column(name = "id_user")
-    private long idUser;
+    @ManyToMany
+    @JoinColumn(name = "id_user")
+    private UserEntity user;
 
     @Column(name = "task_due_date")
     private Date taskDueDate;
