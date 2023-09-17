@@ -1,8 +1,8 @@
 package it.mohamed.crudproject.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import it.mohamed.crudproject.enums.*;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -16,7 +16,7 @@ public class TaskEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_task", unique = true)
-    private long id;
+    private int id;
 
     @Column(name = "task_objective")
     private String taskObj;
@@ -29,8 +29,9 @@ public class TaskEntity {
     @Column(name = "task_status")
     private TaskStatus status;
 
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name = "id_user")
+    @JsonIgnore
     private UserEntity user;
 
     @Column(name = "task_due_date")
