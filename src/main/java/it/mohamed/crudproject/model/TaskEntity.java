@@ -31,7 +31,7 @@ public class TaskEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_user")
-    @JsonIgnore
+    @JsonIgnore //  to break the loop, without it the programme keeps looping
     private UserEntity user;
 
     @Column(name = "task_due_date")

@@ -1,5 +1,6 @@
 package it.mohamed.crudproject.controller;
 
+import it.mohamed.crudproject.dto.TaskDto;
 import it.mohamed.crudproject.enums.TaskStatus;
 import it.mohamed.crudproject.model.TaskEntity;
 import it.mohamed.crudproject.service.TaskService;
@@ -19,8 +20,8 @@ public class TaskController {
     private TaskService taskService;
 
     @GetMapping("/taskById/{id}")
-    public TaskEntity getTaskById(@PathVariable int id) {
-        return taskService.getTask(id);
+    public ResponseEntity<TaskDto> getTaskById(@PathVariable int id) {
+        return ResponseEntity.ok(taskService.getTask(id));
     }
 
     @GetMapping(value = "/taskList/{status}")
