@@ -9,6 +9,7 @@ import { UserTodoListElementComponent } from './page-elements/user-todo-list-ele
 import { UserSessionElementComponent } from './page-elements/user-session-element/user-session-element.component';
 import { UserMainButtonElementComponent } from './page-elements/user-main-button-element/user-main-button-element.component';
 import { UserEndElementComponent } from './page-elements/user-end-element/user-end-element.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UserEndElementComponent } from './page-elements/user-end-element/user-e
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

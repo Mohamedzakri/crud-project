@@ -1,7 +1,4 @@
-body {
-  background-color: red; /* Replace with your desired color */
-}
-.start-button{
+/* .start-button{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,4 +23,10 @@ body {
   position: absolute;
   top: 100px;
   left: 500px;
+} */
+
+.end-page{
+  position: fixed;
+  bottom: 100px;
+  background-color: blue;
 }
