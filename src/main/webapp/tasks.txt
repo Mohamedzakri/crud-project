@@ -1,0 +1,12 @@
+display a list of task by a user id,
+and order them by the priority
+
+from the be retrive a list of task -> endpoint(getTaskByPriority) -> fe service -> to component -> display them accordingaly
+
+
+fe add services for various task entity operations (see google keep) 1:30h
+try to make a custom method
+add services
+
+ideas:
+quizes for angualr, spring, java	
