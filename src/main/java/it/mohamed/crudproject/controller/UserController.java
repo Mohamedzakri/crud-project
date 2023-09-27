@@ -24,4 +24,5 @@ public class UserController {
         return ResponseEntity.ok(userService.getUser(param));
     }
 
+
 }
