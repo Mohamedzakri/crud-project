@@ -1,6 +1,5 @@
 package it.mohamed.crudproject.controller;
 
-
 import it.mohamed.crudproject.enums.TaskStatus;
 import it.mohamed.crudproject.model.TaskEntity;
 import it.mohamed.crudproject.service.TaskService;
@@ -18,7 +17,6 @@ import java.util.List;
 public class TaskController {
     @Autowired
     private TaskService taskService;
-
 
     @GetMapping(value = "/taskList/{status}")
     public ResponseEntity<List<TaskEntity>> getTaskByStatus(@PathVariable TaskStatus status) {
