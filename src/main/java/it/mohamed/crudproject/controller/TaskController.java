@@ -18,11 +18,17 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
-    @GetMapping(value = "/taskList/{status}")
-    public ResponseEntity<List<TaskEntity>> getTaskByStatus(@PathVariable TaskStatus status) {
-        return ResponseEntity.ok(taskService.getTaskByStatus(status));
+    /*
+     * Get users Done tasks by users id
+     * */
+    @GetMapping(value = "/taskList/{id}")
+    public ResponseEntity<List<TaskEntity>> getTaskByStatus(@PathVariable Long id) {
+        return ResponseEntity.ok(taskService.getUserDoneTaskList(id));
     }
 
+    /*
+     *Get User tasks List and list them by priority
+     **/
     @GetMapping(value = "/userTasks/{id}")
     public ResponseEntity<List<TaskEntity>> getTaskByPriority(@PathVariable Long id) {
         return ResponseEntity.ok(taskService.getTaskByPriority(id));

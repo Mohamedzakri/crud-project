@@ -13,7 +13,20 @@
           <div class="m-3" *ngFor="let task of tasks">
             <div class="p-2 shadow border" id="tasks">
               <div class="input-group row ps-3">
-                <div class="card col-md-10 border-0">{{ task.taskObj }}</div>
+                <div class="card col-md-10 border-0">
+                  {{ task.taskObj }} {{ task.priority }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="overflow-y: auto; height: 350px">
+          <div class="m-3" *ngFor="let task of Donetasks">
+            <div class="p-2 shadow border" id="tasks">
+              <div class="input-group row ps-3">
+                <div class="card col-md-10 border-0">
+                  {{ task.taskObj }} {{ task.status }}
+                </div>
               </div>
             </div>
           </div>

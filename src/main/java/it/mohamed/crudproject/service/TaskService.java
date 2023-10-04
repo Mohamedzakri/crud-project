@@ -29,4 +29,8 @@ public class TaskService {
     public List<TaskEntity> getTaskByPriority(Long id) {
         return taskRepository.getTaskByPriority(id);
     }
+
+    public List<TaskEntity> getUserDoneTaskList(Long id) {
+        return taskRepository.getUserDoneTasks(id);
+    }
 }
