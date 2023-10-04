@@ -1,7 +1,10 @@
 Progress:
     created task controller that returns a list of tasks by priority
 Task:
--> fe service -> to component -> display them accordingaly
+-> fe service -> to component -> display them accordingaly done
+. be tests unit, integrity, all tests
+. various operations 
+. fix fe to be able to use log in users id to retrive data from fe
 
 ideas:
 quizes for angualr, spring, java	
