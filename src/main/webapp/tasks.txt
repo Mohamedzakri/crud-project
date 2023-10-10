@@ -1,9 +1,11 @@
 Progress:
-    created task controller that returns a list of tasks by priority
+    .created task controller that returns a list of tasks by priority
+    .users still in Progress tasks are still in the top and done tasks are in the bottom
+
 Task:
--> fe service -> to component -> display them accordingaly done
 . be tests unit, integrity, all tests
 . various operations 
+. fix fe code from unused comments and various methods
 . fix fe to be able to use log in users id to retrive data from fe
 
 ideas:

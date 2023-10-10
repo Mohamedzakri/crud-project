@@ -1,6 +1,5 @@
 package it.mohamed.crudproject.controller;
 
-import it.mohamed.crudproject.enums.TaskStatus;
 import it.mohamed.crudproject.model.TaskEntity;
 import it.mohamed.crudproject.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +14,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/task")
 public class TaskController {
+
+    private final TaskService taskService;
+
     @Autowired
-    private TaskService taskService;
+    public TaskController(TaskService taskService) {
+        this.taskService = taskService;
+    }
 
     /*
      * Get users Done tasks by users id

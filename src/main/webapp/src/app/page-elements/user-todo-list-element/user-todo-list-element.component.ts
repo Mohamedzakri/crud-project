@@ -13,15 +13,16 @@ export class UserTodoListElementComponent implements OnInit {
   Donetasks!: ITask[];
   status: TaskStatus = TaskStatus.DONE;
   id: number = 1;
+
   constructor(private taskService: TaskService) {}
   ngOnInit(): void {
-    //   this.taskService.getTasksList(this.id).subscribe((tasks) => {
-    //     this.tasks = this.tasks;
-    this.tasks;
     this.getAllTask();
     this.getAllDoneTasks();
   }
 
+  /**
+   * Retrieves the user's tasks from the `TaskService` and assigns them to the `tasks` field.
+   */
   getAllTask() {
     this.taskService.getTasksList(this.id).subscribe(
       (res) => {
@@ -32,6 +33,10 @@ export class UserTodoListElementComponent implements OnInit {
       }
     );
   }
+
+  /**
+   * Retrieves the user's done tasks from the `TaskService` and assigns them to the `Donetasks` field.
+   */
   getAllDoneTasks() {
     this.taskService.getDoneTasksList(this.id).subscribe(
       (res) => {
