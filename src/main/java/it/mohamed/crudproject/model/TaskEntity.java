@@ -33,10 +33,9 @@ public class TaskEntity {
     @Column(name = "task_status")
     private TaskStatus status;
 
-//    @ManyToOne
-//    @JoinColumn(name = "id_user")
-//    @JsonIgnore //  to break the loop, without it the programme keeps looping
-//    private UserEntity user;
+    @ManyToOne
+    @JoinColumn(name = "id_user")
+    private UserEntity user;
 
     @Column(name = "task_due_date")
     private Date taskDueDate;

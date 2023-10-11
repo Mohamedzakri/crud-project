@@ -21,6 +21,6 @@ public interface TaskRepository extends JpaRepository<TaskEntity, Integer> {
             END""")
     List<TaskEntity> getTaskByPriority(@Param("id") Long id);
 
-    @Query(value =" SELECT t from TaskEntity t WHERE (t.user.id =:id) AND (t.status = DONE)" )
-    List<TaskEntity> getUserDoneTasks(@Param("id")Long id);
+    @Query(value = " SELECT t from TaskEntity t JOIN FETCH t.user WHERE (t.user.id =:id) AND (t.status = DONE)")
+    List<TaskEntity> getUserDoneTasks(@Param("id") Long id);
 }

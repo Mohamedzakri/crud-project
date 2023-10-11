@@ -3,6 +3,8 @@ Progress:
     .users still in Progress tasks are still in the top and done tasks are in the bottom
 
 Task:
+. use dtos and clean be code
+. use logs inside methods
 . be tests unit, integrity, all tests
 . various operations 
 . fix fe code from unused comments and various methods
