@@ -1,11 +1,11 @@
 Progress:
     .created task controller that returns a list of tasks by priority
     .users still in Progress tasks are still in the top and done tasks are in the bottom
+    . use dtos and clean be code
+    . use logs inside methods
 
 Task:
-. use dtos and clean be code
-. use logs inside methods
-. be tests unit, integrity, all tests
+. be tests unit, integrity, all tests // they don't run 
 . various operations 
 . fix fe code from unused comments and various methods
 . fix fe to be able to use log in users id to retrive data from fe

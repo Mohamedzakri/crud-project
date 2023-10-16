@@ -3,22 +3,41 @@ package it.mohamed.crudproject.repo;
 import it.mohamed.crudproject.enums.TaskPriority;
 import it.mohamed.crudproject.enums.TaskStatus;
 import it.mohamed.crudproject.model.TaskEntity;
+import it.mohamed.crudproject.model.UserEntity;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
+@RunWith(SpringRunner.class)
 @DataJpaTest
 @AutoConfigureTestDatabase(connection = EmbeddedDatabaseConnection.H2)
+@ActiveProfiles("test")
 class TaskRepoTest {
     @Autowired
     private TaskRepository taskRepository;
+
+
+    @Test
+    void saveTaskRepository_whenTaskEntity_thenSaveTask(){
+        UserEntity user = UserEntity.builder().userName("name").build();
+        TaskEntity taskEntity = TaskEntity.builder().taskObj("taskObj1").priority(TaskPriority.HIGH).status(TaskStatus.TO_DO).user(user).build();
+
+        taskRepository.save(taskEntity);
+
+        TaskEntity savedTask = taskRepository.findById(taskEntity.getId()).get();
+
+        Assertions.assertThat(savedTask).isNotNull().isEqualTo(taskEntity);
+    }
 
     @Test
     void taskRepository_SaveAll_ReturnSavedTask() {
