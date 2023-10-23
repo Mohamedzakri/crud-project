@@ -1,3 +1,6 @@
+                                                    MORE MONEY? 
+                                            FINISH THIS PROJECT!!!!!!
+
 Progress:
     .created task controller that returns a list of tasks by priority
     .users still in Progress tasks are still in the top and done tasks are in the bottom
@@ -6,6 +9,20 @@ Progress:
 
 Task:
 . be tests unit, integrity, all tests // they don't run 
+. follow the tutorial to apply user auth and autorisation
+    .done 
+    PasswordConfig , 
+    RestExceptionHandler, 
+    UserAuthenticationEntryPoint , 
+    UserAuthenticationProvider ,
+    RestExceptionHandler , 
+    ErrorDto , 
+    AppException
+    .inProgress
+    JwtAuthFilter
+
+
+    check commit 
 . various operations 
 . fix fe code from unused comments and various methods
 . fix fe to be able to use log in users id to retrive data from fe

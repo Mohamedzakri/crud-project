@@ -24,6 +24,9 @@ public class UserEntity {
     @Column(name = "user_name")
     private String userName;
 
+    @Column(nullable = false, length = 100)
+    private String login;
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<TaskEntity> taskEntities = new ArrayList<>();
 
