@@ -5,8 +5,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.Optional;
+
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
     @Query("Select u from UserEntity u where u.userName = :param OR u.id = :param")
     UserEntity getUserByParam(@Param("param") Object param);
+    Optional<UserEntity> findByLogin(String login);
 
 }

@@ -9,23 +9,23 @@ Progress:
 
 Task:
 . be tests unit, integrity, all tests // they don't run 
-. follow the tutorial to apply user auth and autorisation
-    .done 
-    PasswordConfig , 
-    RestExceptionHandler, 
-    UserAuthenticationEntryPoint , 
-    UserAuthenticationProvider ,
-    RestExceptionHandler , 
-    ErrorDto , 
-    AppException
+. follow the tutorial to apply user auth and authorization
     .inProgress
-    JwtAuthFilter
-
-
+    1) make a list of all new classes used in the security 1h
+    2) go back to the application and finish fe auth/authorization
+    3) a user needs to login when he wants to create a new task
+        3.a) the tuto approach seems reasonable but to appear only when required
+        3.b) how to make the backend ignore registration or login when i use the main app but requires them when:
+        3.) all functionality are available  since they need to be stored in the database.
     check commit 
+. breakdown the security code and understand it
+. fix sonarlint issues
+. fix snyk issues
 . various operations 
 . fix fe code from unused comments and various methods
 . fix fe to be able to use log in users id to retrive data from fe
 
 ideas:
 quizes for angualr, spring, java	
+
+
