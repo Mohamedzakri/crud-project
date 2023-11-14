@@ -1,0 +1,23 @@
+<div>
+  <!-- app-buttons is an external component
+  it has two event emitters login and logout from the button component
+  based on the button clicked it launches a certain event it show either
+  login or welcome calls the method showComponent
+  -->
+  <app-buttons
+    (loginEvent)="showComponent('login')"
+    (logoutEvent)="showComponent('home')"
+  />
+  <!-- if the componentToShow method retunrs a welcome it shows
+  the welcome component -->
+  <app-home-page *ngIf="componentToShow == 'home'" />
+  <!-- if the componentToShow method retunrs a login it shows
+  the login component -->
+  <app-login-form
+    (onSubmitLoginEvent)="onLogin($event)"
+    (onSubmitRegisterEvent)="onRegister($event)"
+    *ngIf="componentToShow == 'login'"
+  />
+  <!-- in case it's a message it shows the auuth-content -->
+  <app-auth-content *ngIf="componentToShow == 'messages'" />
+</div>

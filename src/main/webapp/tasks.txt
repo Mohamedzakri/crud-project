@@ -8,24 +8,21 @@ Progress:
     . use logs inside methods
 
 Task:
-. be tests unit, integrity, all tests // they don't run 
-. follow the tutorial to apply user auth and autorisation
-    .done 
-    PasswordConfig , 
-    RestExceptionHandler, 
-    UserAuthenticationEntryPoint , 
-    UserAuthenticationProvider ,
-    RestExceptionHandler , 
-    ErrorDto , 
-    AppException
-    .inProgress
-    JwtAuthFilter
-
-
+    .{To-do}
+    delete the welcome content
+    be tests unit, integrity, all tests // they don't run 
+    improve fe auth code
+    what's are events in angular or ts
+    
+    .{inProgress}
+    fix the be code to retrive task lists
+    modify the code so when a user clickes to add a new task it requires him to login/register
     check commit 
-. various operations 
-. fix fe code from unused comments and various methods
-. fix fe to be able to use log in users id to retrive data from fe
+
+    .{done}
+    follow the tutorial to apply user auth and autorisation
+    understand/comment fe auth code
+    made the fe run
 
 ideas:
 quizes for angualr, spring, java	
