@@ -10,12 +10,12 @@ Progress:
 Task:
     .{To-do}
     delete the welcome content
-    be tests unit, integrity, all tests // they don't run 
     improve fe auth code
     what's are events in angular or ts
+    be tests unit, integrity, all tests // they don't run 
     
     .{inProgress}
-    fix the be code to retrive task lists
+    fix the be code to retrive task lists // isue : authorisation max 1:30h
     modify the code so when a user clickes to add a new task it requires him to login/register
     check commit 
 
