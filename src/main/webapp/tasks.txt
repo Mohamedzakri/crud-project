@@ -3,6 +3,8 @@
 
 Task:
     .{To-do}
+		run the application and test for the security config
+		add the log infos and warns to various methods
 		delete the welcome content
     	modify the code so when a user clickes to add a new task it requires him to login/register
 		theo jpa mapping, Serilizable classes
@@ -12,9 +14,10 @@ Task:
     	be tests unit, integrity, all tests // they don't run 
     
     .{inProgress}
-		check commit 
+		
 
     .{done}
+		check commit 
 		run the be(fix all the issues){fixes: mainstreaming user to userEntity in all entities and repos}
 		modify the database (modify the table for user and token)
 		video
