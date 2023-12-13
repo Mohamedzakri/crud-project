@@ -9,11 +9,12 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface TaskRepository extends JpaRepository<TaskEntity, Integer> {
+
     @Query(value = "Select t from TaskEntity t where (t.status = :status )")
     List<TaskEntity> getTaskByStatus(@Param("status") TaskStatus status);
 
     @Query(value = """
-            SELECT t FROM TaskEntity t WHERE (t.user.id = :id ) ORDER BY CASE t.priority
+            SELECT t FROM TaskEntity t WHERE (t.userEntity.id = :id ) ORDER BY CASE t.priority
                 WHEN 'LOW' THEN 3
                 WHEN 'MEDIUM' THEN 2
                 WHEN 'HIGH' THEN 1
@@ -21,6 +22,6 @@ public interface TaskRepository extends JpaRepository<TaskEntity, Integer> {
             END""")
     List<TaskEntity> getTaskByPriority(@Param("id") Long id);
 
-    @Query(value = " SELECT t from TaskEntity t JOIN FETCH t.user WHERE (t.user.id =:id) AND (t.status = DONE)")
+    @Query(value = " SELECT t from TaskEntity t JOIN FETCH t.userEntity WHERE (t.userEntity.id =:id) AND (t.status = DONE)")
     List<TaskEntity> getUserDoneTasks(@Param("id") Long id);
 }

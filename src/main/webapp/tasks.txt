@@ -1,28 +1,33 @@
                                                     MORE MONEY? 
                                             FINISH THIS PROJECT!!!!!!
 
-Progress:
-    .created task controller that returns a list of tasks by priority
-    .users still in Progress tasks are still in the top and done tasks are in the bottom
-    . use dtos and clean be code
-    . use logs inside methods
-
 Task:
     .{To-do}
-    delete the welcome content
-    improve fe auth code
-    what's are events in angular or ts
-    be tests unit, integrity, all tests // they don't run 
+		delete the welcome content
+    	modify the code so when a user clickes to add a new task it requires him to login/register
+		theo jpa mapping, Serilizable classes
+		how did mysql create the tables?
+    	what's are events in angular or ts
+		learn websocket, transactional, Aop? and try to apply it in the app
+    	be tests unit, integrity, all tests // they don't run 
     
     .{inProgress}
-    fix the be code to retrive task lists // isue : authorisation max 1:30h
-    modify the code so when a user clickes to add a new task it requires him to login/register
-    check commit 
+		check commit 
 
     .{done}
-    follow the tutorial to apply user auth and autorisation
-    understand/comment fe auth code
-    made the fe run
+		run the be(fix all the issues){fixes: mainstreaming user to userEntity in all entities and repos}
+		modify the database (modify the table for user and token)
+		video
+    	add user authorisation/authentication to the app 40min be
+    	follow the tutorial to apply user auth and autorisation
+    	understand/comment fe auth code
+    	made the fe run
+    	fix the be code to retrive task lists // isue : authorisation max 1:30h
+        created task controller that returns a list of tasks by priority
+        users still in Progress tasks are still in the top and done tasks are in the bottom
+        use dtos and clean be code
+        use logs inside methods
+
 
 ideas:
-quizes for angualr, spring, java	
+	quizes for angualr, spring, java	

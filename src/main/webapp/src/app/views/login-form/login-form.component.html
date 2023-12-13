@@ -30,7 +30,7 @@
           active == 'login' ? 'tab-pane fade show active' : 'tab-pane fade'
         "
       >
-	  <!-- two inputs with a username and a password -->
+        <!-- two inputs with a username and a password -->
         <form #loginForm="ngForm" (ngSubmit)="onSubmitLogin()">
           <div class="form-outline mb-4">
             <input
@@ -59,7 +59,7 @@
           </button>
         </form>
       </div>
-	  <!-- a div to show a different css class depending on the active value -->
+      <!-- a div to show a different css class depending on the active value -->
       <div
         [ngClass]="
           active == 'register' ? 'tab-pane fade show active' : 'tab-pane fade'

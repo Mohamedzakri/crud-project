@@ -8,6 +8,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
@@ -16,7 +18,11 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class TaskEntity {
+public class TaskEntity implements Serializable{
+
+    @Serial
+    private static final long serialVersionUID = 1905122041950251202L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_task", unique = true)
@@ -35,7 +41,7 @@ public class TaskEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_user")
-    private UserEntity user;
+    private UserEntity userEntity;
 
     @Column(name = "task_due_date")
     private Date taskDueDate;
