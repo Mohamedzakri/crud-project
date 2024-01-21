@@ -30,7 +30,7 @@ class TaskRepoTest {
     @Test
     void saveTaskRepository_whenTaskEntity_thenSaveTask(){
         UserEntity user = UserEntity.builder().userName("name").build();
-        TaskEntity taskEntity = TaskEntity.builder().taskObj("taskObj1").priority(TaskPriority.HIGH).status(TaskStatus.TO_DO).user(user).build();
+        TaskEntity taskEntity = TaskEntity.builder().taskObj("taskObj1").priority(TaskPriority.HIGH).status(TaskStatus.TO_DO).userEntity(user).build();
 
         taskRepository.save(taskEntity);
 

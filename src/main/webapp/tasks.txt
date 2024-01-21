@@ -1,10 +1,11 @@
                                                     MORE MONEY? 
                                             FINISH THIS PROJECT!!!!!!
-
+													
 Task:
     .{To-do}
-		run the application and test for the security config
+		clean the pom
 		add the log infos and warns to various methods
+		create a vddl for the project
 		delete the welcome content
     	modify the code so when a user clickes to add a new task it requires him to login/register
 		theo jpa mapping, Serilizable classes
@@ -14,9 +15,35 @@ Task:
     	be tests unit, integrity, all tests // they don't run 
     
     .{inProgress}
-		
+		run the application and test for the security config
+	
+	.{issues}
+		403 forbidden:
+			doesn't return the saved user.
+
+		reset user table ids to 0
+		delete seq tables
+	.{solution}
+
+	.{issues-done}
+		still fails to authenticate:
+			it succedes at making a request to a simple get endpoint that prints a string after registering and authenticating,
+			but fails to make a call to the rest endpoints 
+				how?: 
+					added @jsonignore on @ManyToOne
+
+		403 forbidden:
+			saves new user but returns 403.
+			fixed token table because it had an additional user id column
+			how?: 
+				"removed" the to string from taskEntities and token in the user userEntity (@ToString.Exclude)
+
+		app doesn't save a new user with the register endpoint:
+			saves only the password and email bur nothing else.
 
     .{done}
+		clean postman
+		table sequenses in mysql
 		check commit 
 		run the be(fix all the issues){fixes: mainstreaming user to userEntity in all entities and repos}
 		modify the database (modify the table for user and token)

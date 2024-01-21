@@ -3,10 +3,7 @@ package it.mohamed.crudproject.model;
 import it.mohamed.crudproject.config.token.Token;
 import it.mohamed.crudproject.enums.Role;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -27,7 +24,7 @@ public class UserEntity implements UserDetails{
     private static final long serialVersionUID = 1905122041950251207L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_user", unique = true)
     private int id;
 
@@ -40,7 +37,7 @@ public class UserEntity implements UserDetails{
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(nullable = false, length = 100)
+    @Column(length = 100)
     private String login;
 
     @Column(nullable = false, length = 100)
@@ -49,13 +46,15 @@ public class UserEntity implements UserDetails{
     @Column(nullable = false, length = 100)
     private String password;
 
-    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    @ToString.Exclude
+    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<TaskEntity> taskEntities = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @OneToMany(mappedBy = "userEntity")
+    @ToString.Exclude
+    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Token> tokens;
 
     @Override

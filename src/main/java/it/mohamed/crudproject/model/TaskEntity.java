@@ -1,5 +1,6 @@
 package it.mohamed.crudproject.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import it.mohamed.crudproject.enums.TaskPriority;
 import it.mohamed.crudproject.enums.TaskStatus;
 import jakarta.persistence.*;
@@ -24,7 +25,7 @@ public class TaskEntity implements Serializable{
     private static final long serialVersionUID = 1905122041950251202L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_task", unique = true)
     private int id;
 
@@ -39,7 +40,8 @@ public class TaskEntity implements Serializable{
     @Column(name = "task_status")
     private TaskStatus status;
 
-    @ManyToOne
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_user")
     private UserEntity userEntity;
 

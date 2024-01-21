@@ -3,6 +3,7 @@ package it.mohamed.crudproject.controller;
 
 import it.mohamed.crudproject.dto.TaskDto;
 import it.mohamed.crudproject.service.TaskService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/task")
 public class TaskController {
@@ -36,7 +38,7 @@ public class TaskController {
      * */
     @GetMapping(value = "/taskList/{id}")
     public ResponseEntity<List<TaskDto>> getTaskByStatus(@PathVariable Long id) {
-        logger.info("### [{}] Accessed {} in class {} with id: {} ###", FORMATTEDDATETIME, Thread.currentThread().getStackTrace()[1].getMethodName(), this.getClass().getSimpleName(), id);
+        log.info("{} -> {} : invoked", this.getClass().getSimpleName(), new Object(){}.getClass().getEnclosingMethod().getName());
         return ResponseEntity.ok(taskService.getUserDoneTaskList(id));
     }
 
