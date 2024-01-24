@@ -1,21 +1,22 @@
                                                     MORE MONEY? 
-                                            FINISH THIS PROJECT!!!!!!
-													
+                                            FINISH THIS PROJECT!!!!!!													
 Task:
+
     .{To-do}
-		clean the pom
-		add the log infos and warns to various methods
-		create a vddl for the project
-		delete the welcome content
-    	modify the code so when a user clickes to add a new task it requires him to login/register
+		create a vddl for the project (medium micro services)
+    	modify the code so when a user clickes to add a new task it requires him to login/register(medium/ hard)
 		theo jpa mapping, Serilizable classes
 		how did mysql create the tables?
     	what's are events in angular or ts
 		learn websocket, transactional, Aop? and try to apply it in the app
+		clean classes in the be app, and standarise the log messages
+		introduce exceptions and try and catch blocks in the be/fe method
     	be tests unit, integrity, all tests // they don't run 
+		model mapper theo
+		jms theo
     
     .{inProgress}
-		run the application and test for the security config
+		create a vddl for the project (medium micro services)
 	
 	.{issues}
 		403 forbidden:
@@ -42,6 +43,10 @@ Task:
 			saves only the password and email bur nothing else.
 
     .{done}
+		run the application and test for the security config
+		delete the welcome content (easy)
+		clean the pom (easy)
+		add the log infos and warns to various methods
 		clean postman
 		table sequenses in mysql
 		check commit 
@@ -57,7 +62,6 @@ Task:
         users still in Progress tasks are still in the top and done tasks are in the bottom
         use dtos and clean be code
         use logs inside methods
-
 
 ideas:
 	quizes for angualr, spring, java	

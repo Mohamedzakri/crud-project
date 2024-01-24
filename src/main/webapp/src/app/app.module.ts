@@ -10,7 +10,6 @@ import { UserSessionElementComponent } from './page-elements/user-session-elemen
 import { UserMainButtonElementComponent } from './page-elements/user-main-button-element/user-main-button-element.component';
 import { UserEndElementComponent } from './page-elements/user-end-element/user-end-element.component';
 import { HttpClientModule } from '@angular/common/http';
-import { WelcomeContentComponent } from './views/welcome-content/welcome-content.component';
 import { LoginFormComponent } from './views/login-form/login-form.component';
 import { ContentComponent } from './views/content/content.component';
 import { ButtonsComponent } from './views/buttons/buttons.component';
@@ -27,7 +26,6 @@ import { FormsModule } from '@angular/forms';
     UserSessionElementComponent,
     UserMainButtonElementComponent,
     UserEndElementComponent,
-    WelcomeContentComponent,
     LoginFormComponent,
     ContentComponent,
     ButtonsComponent,
