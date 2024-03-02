@@ -16,6 +16,8 @@ import { ButtonsComponent } from './views/buttons/buttons.component';
 import { AuthContentComponent } from './auth-content/auth-content.component';
 import { AxiosService } from './services/axios.service';
 import { FormsModule } from '@angular/forms';
+import { AuthenticationPageComponent } from './views/authentication-page/authentication-page.component';
+import { RegisterFormComponent } from './views/register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { FormsModule } from '@angular/forms';
     ContentComponent,
     ButtonsComponent,
     AuthContentComponent,
+    AuthenticationPageComponent,
+    RegisterFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [AxiosService],

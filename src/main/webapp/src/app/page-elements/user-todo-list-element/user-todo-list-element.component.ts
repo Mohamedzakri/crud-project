@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TaskStatus } from 'src/app/enums/TaskStatus';
 import { ITask } from 'src/app/models/Task';
 import { TaskService } from 'src/app/services/task-service/task.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-todo-list-element',
@@ -14,7 +15,7 @@ export class UserTodoListElementComponent implements OnInit {
   status: TaskStatus = TaskStatus.DONE;
   id: number = 1;
 
-  constructor(private taskService: TaskService) {}
+  constructor(private taskService: TaskService, private router: Router) {}
   ngOnInit(): void {
     this.getAllTask();
     this.getAllDoneTasks();
@@ -29,7 +30,7 @@ export class UserTodoListElementComponent implements OnInit {
         this.tasks = res;
       },
       (err) => {
-        alert('Unable to get list of tasks ' + this.status);
+        //alert('Unable to get list of tasks ' + this.status);
       }
     );
   }
@@ -43,8 +44,12 @@ export class UserTodoListElementComponent implements OnInit {
         this.Donetasks = res;
       },
       (err) => {
-        alert('Unable to get list of tasks ' + this.id);
+        //alert('Unable to get list of tasks ' + this.id);
       }
     );
   }
+  // redirectToAnotherComponent() {
+  //   this.router.navigate(['/register']);
+  //(click)="redirectToAnotherComponent()"
+  // }
 }

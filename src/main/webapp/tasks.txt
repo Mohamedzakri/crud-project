@@ -3,20 +3,28 @@
 Task:
 
     .{To-do}
-		create a vddl for the project (medium micro services)
-    	modify the code so when a user clickes to add a new task it requires him to login/register(medium/ hard)
-		theo jpa mapping, Serilizable classes
-		how did mysql create the tables?
-    	what's are events in angular or ts
-		learn websocket, transactional, Aop? and try to apply it in the app
-		clean classes in the be app, and standarise the log messages
-		introduce exceptions and try and catch blocks in the be/fe method
-    	be tests unit, integrity, all tests // they don't run 
-		model mapper theo
-		jms theo
+		{theo}
+			theo jpa mapping, Serilizable classes
+			how did mysql create the tables?
+			what's are events in angular or ts
+			learn websocket, transactional, Aop? and try to apply it in the app
+			model mapper theo
+			jms theo
+			maven (clean install, run as spring, etc....)
+			snyk
+		{task/features}
+			clean classes in the be app, and standarise the log messages
+			introduce exceptions and try and catch blocks in the be/fe method
+			be tests unit, integrity, all tests // they don't run 
+			fe logger
+			fe exceptions
+			fe tests
+			create a vddl for the project (medium)
+			spring banner
     
     .{inProgress}
-		create a vddl for the project (medium micro services)
+		modify the code so when a user clicks to add a new task it requires him to login/register(medium/ hard)
+			analyse the project and understand how it works, then implement it into this project.
 	
 	.{issues}
 		403 forbidden:
