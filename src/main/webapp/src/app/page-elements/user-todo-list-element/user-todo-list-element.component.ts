@@ -29,7 +29,7 @@ export class UserTodoListElementComponent implements OnInit {
         this.tasks = res;
       },
       (err) => {
-        alert('Unable to get list of tasks ' + this.status);
+        //alert('Unable to get list of tasks ' + this.status);
       }
     );
   }
@@ -43,7 +43,7 @@ export class UserTodoListElementComponent implements OnInit {
         this.Donetasks = res;
       },
       (err) => {
-        alert('Unable to get list of tasks ' + this.id);
+        //alert('Unable to get list of tasks ' + this.id);
       }
     );
   }

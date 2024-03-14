@@ -3,7 +3,7 @@
 Task:
 
     .{To-do}
-		create a vddl for the project (medium micro services)
+		
     	modify the code so when a user clickes to add a new task it requires him to login/register(medium/ hard)
 		theo jpa mapping, Serilizable classes
 		how did mysql create the tables?
@@ -14,9 +14,10 @@ Task:
     	be tests unit, integrity, all tests // they don't run 
 		model mapper theo
 		jms theo
-    
-    .{inProgress}
 		create a vddl for the project (medium micro services)
+    
+	.{inProgress}
+		fix the fe layout	
 	
 	.{issues}
 		403 forbidden:
