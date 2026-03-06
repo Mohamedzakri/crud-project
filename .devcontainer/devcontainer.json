@@ -1,0 +1,44 @@
+{
+  "name": "Spring + Angular + PostgreSQL",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+
+  "features": {},
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-spring-boot",
+        "vscjava.vscode-spring-initializr",
+        "angular.ng-template",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg"
+      ],
+      "settings": {
+        "java.jdt.ls.java.home": "/usr/lib/jvm/java-21-openjdk-amd64",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  },
+
+  "forwardPorts": [
+    4200,
+    8080,
+    5432
+  ],
+
+  "portsAttributes": {
+    "4200": { "label": "Angular" },
+    "8080": { "label": "Spring Boot" },
+    "5432": { "label": "PostgreSQL" }
+  },
+
+  "postCreateCommand": "node --version && java --version && ng version",
+
+  "remoteUser": "vscode"
+}
